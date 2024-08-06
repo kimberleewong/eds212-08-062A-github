@@ -46,4 +46,39 @@ ggplot(data=new_data_range,aes(x=x)) +
   geom_function(fun=eq2)
 ```
 
+# graphing derivative and orig fxn
+
+```{r}
+# create new function C(t) ----
+ct <- function(t) {
+  t^3
+}
+
+# take deriv of ct ----
+dc_dt<-D(expr=expression(t^3),name="t")
+
+# create deriv ft. ----
+dc_dt_fun <- function(t) {
+  3*t^2
+}
+
+
+#df of values ----
+data_range<-data.frame(t=c(-5,5))
+
+# plot function
+ggplot(data=data_range,aes(x=t)) +
+  geom_function(fun=ct,color="red") +
+  geom_function(fun=dc_dt_fun,color="blue")
+```
+
+```{r}
+# create expression ----
+f_xyz<- expression (2*x*y - 3*x^2*z^3)
+
+# partial w/ respect to x ----
+df_dx <- D(f_xyz, name="x")
+```
+
+
 
