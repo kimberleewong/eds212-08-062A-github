@@ -1,6 +1,49 @@
 ---
-title: "github prac"
+title: "github prac//afternoon exercises"
 author: "kimmy wong"
 format: html
+editor_options: 
+  chunk_output_type: console
 ---
-book
+
+```{r}
+# load packages ----
+
+library(tidyverse)
+
+# define function ; shortcut: command,option,x ---- 
+eq1 <- function(x) {
+  3*x^2+4
+}
+
+# create a dataframe w/ range of values to evaluate our fxn across ----
+
+my_data_range<-data.frame(x=c(1,100))
+
+
+# plot function as a continuous curve over our specified range of values in our df ----
+
+ggplot(data=my_data_range,aes(x=x)) +
+  geom_function(fun=eq1)
+```
+
+
+# exercise 2
+
+```{r}
+# define function ----
+eq2 <- function(x) {
+  2.4-(5*x^3)+(2.1*x^2)
+}
+
+# create a dataframe w/ range of values to evaluate our fxn across ----
+
+new_data_range<-data.frame(x=c(-50,50))
+
+# plot function as a continuous curve over our specified range of values in our df ----
+
+ggplot(data=new_data_range,aes(x=x)) +
+  geom_function(fun=eq2)
+```
+
+
