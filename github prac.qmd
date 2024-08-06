@@ -3,9 +3,3 @@ title: "github prac"
 author: "kimmy wong"
 format: html
 ---
-
-boop
-b
-ssf
-jk
-jkhiu
